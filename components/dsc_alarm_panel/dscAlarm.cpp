@@ -946,7 +946,7 @@ void DSCkeybushome::setup()
 
         if (payload["state"].is<std::string>())
         {
-          const char *c = "";
+          const char *c = accessCode ? accessCode : "";
           if (payload["code"].is<std::string>())
             c = payload["code"];
           std::string code = c;
